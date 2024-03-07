@@ -8,7 +8,7 @@ let elOfferta = document.getElementById('sconto');
 let elPrezzo = document.getElementById('prezzo');
 const tarifBase = 0.21;
 let elVagone = document.getElementById('vagone');
-
+let elTicket = document.querySelector('.ticket');
 
 elBtnCalcola.addEventListener('click', function () {
     const nome = elNomeCognome.value;
@@ -21,7 +21,7 @@ elBtnCalcola.addEventListener('click', function () {
     let price;
     let offerta;
     let vagone = getRndInteger(1 ,20);
-    let elTicket = document.querySelector('.ticket');
+    
 
     if (parseInt(age) < 18) {
         price = priceBase - (priceBase * 20 / 100);
@@ -42,7 +42,7 @@ elBtnCalcola.addEventListener('click', function () {
 
 elBtnAnnull.addEventListener('click', function () {
     //console.log('hai annullato');
-    // elTicket.className = `${ticket} ${d-none}`;
+    elTicket.className = `${'ticket'} ${'d-none'}`;
     document.getElementById('NomeCognome').value = '';
     document.getElementById('km').value = '';
     document.getElementById('nome').innerHTML = '';
