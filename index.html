@@ -14,7 +14,7 @@
     <div class="container">
 
         <div class="card mb-3 mt-4 px-3 text-bg-danger ">
-            <h2 class="text-white">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+            <h2 class="text-white text-uppercase">calcola il prezzo del tuo biglietto</h2>
             <div class="row">
                 <div class="col-4 mb-3">
                     <label class="form-label">Nome e Cognome </label>
@@ -38,7 +38,7 @@
                 <button class="btn btn-warning  " id="calc">
                     Calcola
                 </button>
-                <button class="btn btn-warning  " id="anull">
+                <button class="btn btn-warning  " id="reset">
                     Annulla
                 </button>
             </div>
@@ -46,7 +46,7 @@
 
         <div class="ticket d-none ">
             <div class="card px-3 text-bg-danger">
-                <h2 class="text-white">IL TUO BIGLIETTO</h2>
+                <h2 class="text-white text-uppercase">Il tuo biglietto</h2>
                 <div class="d-flex w-100 flex-wrap justify-content-between  ">
                     <div class="mb-2 mx-2" >
                         <label class="form-label">Nome e Cognome</label>
@@ -63,6 +63,10 @@
                     <div class="mb-2 mx-2">
                         <label class="form-label">Vagone</label>
                         <div id="vagone"></div>
+                    </div>
+                    <div class="mb-2 mx-2">
+                        <label class="form-label">Codice CP</label>
+                        <div id="cp-code"></div>
                     </div>
                 </div>
             </div>
