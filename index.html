@@ -17,16 +17,17 @@
             <h2 class="text-white">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
             <div class="row">
                 <div class="col-4 mb-3">
-                    <label for="NomeCognome" class="form-label">Nome e Cognome </label>
+                    <label class="form-label">Nome e Cognome </label>
                     <input type="text" class="form-control" id="NomeCognome" value="">
                 </div>
                 <div class="col-4 mb-3">
-                    <label for="km" class="form-label">Km da percorrere </label>
+                    <label class="form-label">Km da percorrere </label>
                     <input type="number" class="form-control" id="km" value="">
                 </div>
                 <div class="col-4 mb3">
-                    <label for="age" class="form-label">Fascia di età </label>
+                    <label class="form-label">Fascia di età </label>
                     <select class="form-select" id="age">
+                        <option value="">Seleziona una fascia di età</option>
                         <option value="18">Maggiorenne</option>
                         <option value="17">Minorenne</option>
                         <option value="65">Over 65</option>
@@ -43,26 +44,31 @@
             </div>
         </div>
 
-        <div class="card px-3 text-bg-danger d-none">
-            <h2 class="text-white">IL TUO BIGLIETTO</h2>
-            <div class="d-flex w-100 flex-wrap justify-content-between  ">
-                <div class="mb-2 mx-2" >
-                    <label for="nome" class="form-label">Nome e Cognome</label>
-                    <div id="nome"></div>
-                </div>
-                <div class="mb-2 mx-2">
-                    <label for="sconto" class="form-label">Sconto</label>
-                    <div id="sconto"></div>
-                </div>
-                <div class="mb-2 mx-2">
-                    <label for="prezzo" class="form-label">Costo biglietto</label>
-                    <div id="prezzo"></div>
+        <div class="ticket d-none ">
+            <div class="card px-3 text-bg-danger">
+                <h2 class="text-white">IL TUO BIGLIETTO</h2>
+                <div class="d-flex w-100 flex-wrap justify-content-between  ">
+                    <div class="mb-2 mx-2" >
+                        <label class="form-label">Nome e Cognome</label>
+                        <div id="nome"></div>
+                    </div>
+                    <div class="mb-2 mx-2">
+                        <label class="form-label">Sconto</label>
+                        <div id="sconto"></div>
+                    </div>
+                    <div class="mb-2 mx-2">
+                        <label class="form-label">Costo biglietto</label>
+                        <div id="prezzo"></div>
+                    </div>
+                    <div class="mb-2 mx-2">
+                        <label class="form-label">Vagone</label>
+                        <div id="vagone"></div>
+                    </div>
                 </div>
             </div>
-
-        </div>
+         </div>
     </div>
-
+    <script src="js/utility.js"></script>
     <script src="js/myscript.js"></script>
 </body>
 
