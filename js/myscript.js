@@ -2,10 +2,10 @@ let elNomeCognome = document.getElementById('NomeCognome');
 let elKm = document.getElementById('km');
 let elAge = document.getElementById('age');
 let elBtnCalcola = document.getElementById('calc');
-let elBtnAnnull = document.getElementById('annull');
+let elBtnAnnull = document.getElementById('anull');
 
 let elNome = document.getElementById('nome');
-let elOfferta = document.getElementById('offerta');
+let elOfferta = document.getElementById('sconto');
 let elPrezzo = document.getElementById('prezzo');
 const tarifBase = 0.21;
 
@@ -39,7 +39,11 @@ elPrezzo.innerText = price.toFixed(2);
 });
 
 elBtnAnnull.addEventListener('click', function()
-{
-    document.getElementById("NomeCognome").value = " ";
-    document.getElementById("km").value = " ";
+{   
+    //console.log('hai annullato');
+    document.getElementById("NomeCognome").value = '';
+    document.getElementById("km").value = '';
+    document.getElementById('nome').innerHTML = '';
+    document.getElementById('sconto').innerHTML = '';
+    document.getElementById('prezzo').innerHTML = '';
 });
