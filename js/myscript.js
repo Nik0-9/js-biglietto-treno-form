@@ -13,11 +13,11 @@ const tarifBase = 0.21;
 elBtnCalcola.addEventListener('click', function()
 {
 const nome = elNomeCognome.value;
- console.log(nome);
+//  console.log(nome);
 const km = elKm.value;
- console.log(km);
+//  console.log(km);
 const age = elAge.value;
- console.log(age);
+//  console.log(age);
 let priceBase = km * tarifBase;
 let price;
 let offerta;
@@ -40,8 +40,6 @@ elPrezzo.innerText = price.toFixed(2);
 
 elBtnAnnull.addEventListener('click', function()
 {
-    const nome = elNomeCognome.value;
-    nome = '';
-    const km = elKm.value;
-    km = '';
-})
+    document.getElementById("NomeCognome").value = " ";
+    document.getElementById("km").value = " ";
+});
