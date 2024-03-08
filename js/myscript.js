@@ -10,14 +10,14 @@ const tarifBase = 0.21;
 let elVagone = document.getElementById('vagone');
 let elTicket = document.querySelector('.ticket');
 let elCPcode = document.getElementById('cp-code');
-let age = elAge.value;
 
 elBtnCalcola.addEventListener('click', function () {
     const nome = elNomeCognome.value;
     //  console.log(nome);
-    const km = elKm.value;
+    const km = parseInt(elKm.value);
     //  console.log(km);
-    //  console.log(age);
+    let age = parseInt(elAge.value);
+      console.log(age);
     let priceBase = km * tarifBase;
     let price;
     let offerta;
@@ -25,10 +25,10 @@ elBtnCalcola.addEventListener('click', function () {
     let code = getRndInteger(1000, 9000);
     
 
-    if (parseInt(age) < 18) {
+    if (age < 18) {
         price = priceBase - (priceBase * 20 / 100);
         offerta = `Sconto del 20%`;
-    } else if (parseInt(age) >= 65) {
+    } else if (age >= 65) {
         price = priceBase - (priceBase * 40 / 100);
         offerta = `Sconto del 40%`;
     } else {
